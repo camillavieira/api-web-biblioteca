@@ -55,4 +55,59 @@ Content-Type: application/json
 ###
 
 # =======================
-# 5) Listar todos os livros (deve mostrar os 3 livros criad
+# 5) Listar todos os livros (deve mostrar os 3 livros criados)
+# =======================
+GET http://localhost:8080/api/livros
+Accept: application/json
+
+###
+
+# =======================
+# 6) Buscar livro por ID (ex: ID = 1)
+# =======================
+GET http://localhost:8080/api/livros/1
+Accept: application/json
+
+###
+
+# =======================
+# 7) Atualizar livro inteiro (PUT) - Livro ID 1
+# =======================
+PUT http://localhost:8080/api/livros/1
+Content-Type: application/json
+
+{
+  "titulo": "Dom Casmurro Atualizado",
+  "autor": "Machado de Assis",
+  "isbn": "978-8535902774",
+  "anoPublicacao": 1900,
+  "disponivel": false
+}
+
+###
+
+# =======================
+# 8) Atualizar parcialmente (PATCH) - Livro ID 2
+# =======================
+PATCH http://localhost:8080/api/livros/2
+Content-Type: application/json
+
+{
+  "disponivel": false
+}
+
+###
+
+# =======================
+# 9) Deletar livro - Livro ID 3
+# =======================
+DELETE http://localhost:8080/api/livros/3
+
+###
+
+# =======================
+# 10) Listar todos os livros novamente (para conferir alterações)
+# =======================
+GET http://localhost:8080/api/livros
+Accept: application/json
+
