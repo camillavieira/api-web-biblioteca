@@ -1,5 +1,5 @@
 # =======================
-# 1) Listar todos os livros
+# 1) Listar todos os livros (deve retornar vazio no início)
 # =======================
 GET http://localhost:8080/api/livros
 Accept: application/json
@@ -7,7 +7,7 @@ Accept: application/json
 ###
 
 # =======================
-# 2) Criar um novo livro
+# 2) Criar Livro 1
 # =======================
 POST http://localhost:8080/api/livros
 Content-Type: application/json
@@ -23,42 +23,36 @@ Content-Type: application/json
 ###
 
 # =======================
-# 3) Buscar livro por ID
+# 3) Criar Livro 2
 # =======================
-GET http://localhost:8080/api/livros/1
-Accept: application/json
-
-###
-
-# =======================
-# 4) Atualizar livro (PUT)
-# =======================
-PUT http://localhost:8080/api/livros/1
+POST http://localhost:8080/api/livros
 Content-Type: application/json
 
 {
-  "titulo": "Dom Casmurro Atualizado",
+  "titulo": "O Alienista",
   "autor": "Machado de Assis",
-  "isbn": "978-8535902774",
-  "anoPublicacao": 1900,
-  "disponivel": false
-}
-
-###
-
-# =======================
-# 5) Atualizar livro parcialmente (PATCH)
-# =======================
-PATCH http://localhost:8080/api/livros/1
-Content-Type: application/json
-
-{
+  "isbn": "978-8535902767",
+  "anoPublicacao": 1882,
   "disponivel": true
 }
 
 ###
 
 # =======================
-# 6) Deletar livro
+# 4) Criar Livro 3
 # =======================
-DELETE http://localhost:8080/api/livros/1
+POST http://localhost:8080/api/livros
+Content-Type: application/json
+
+{
+  "titulo": "Memórias Póstumas de Brás Cubas",
+  "autor": "Machado de Assis",
+  "isbn": "978-8535902750",
+  "anoPublicacao": 1881,
+  "disponivel": false
+}
+
+###
+
+# =======================
+# 5) Listar todos os livros (deve mostrar os 3 livros criad
