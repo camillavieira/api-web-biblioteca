@@ -1,0 +1,5 @@
+/workspaces/api-web-biblioteca/src/main/java/com/example/biblioteca/BibliotecaApplication.java
+/workspaces/api-web-biblioteca/src/main/java/com/example/biblioteca/controller/LivroController.java
+/workspaces/api-web-biblioteca/src/main/java/com/example/biblioteca/exception/NotFoundException.java
+/workspaces/api-web-biblioteca/src/main/java/com/example/biblioteca/model/Livro.java
+/workspaces/api-web-biblioteca/src/main/java/com/example/biblioteca/repository/LivroRepository.java

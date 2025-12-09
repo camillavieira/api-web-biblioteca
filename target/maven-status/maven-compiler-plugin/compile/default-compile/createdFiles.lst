@@ -1,0 +1,5 @@
+com/example/biblioteca/model/Livro.class
+com/example/biblioteca/controller/LivroController.class
+com/example/biblioteca/repository/LivroRepository.class
+com/example/biblioteca/BibliotecaApplication.class
+com/example/biblioteca/exception/NotFoundException.class
